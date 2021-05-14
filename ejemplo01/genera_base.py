@@ -21,6 +21,10 @@ class Persona(Base):
     pais = Column(String)
     email = Column(String)
 
-
+    def __repr__(self):
+        return "Pais: nombre=%s apellido=%s ciudad:%s" % (
+                          self.nombre, 
+                          self.apellido, 
+                          self.ciudad)
 Base.metadata.create_all(engine)
 
